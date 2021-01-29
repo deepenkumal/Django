@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+    <img class="logo" src="{% static 'images/django.png' %}" alt="">
+    <h1>This is home page</h1>
+    {% block content %}
+    {% endblock %}
+    </div>
+    
+    <!--<table border="">
+      <tr>
+          <th>ID</th>
+          <th>Product Name</th>
+          <th>Prodcut Details</th>
+          <th>Product image</th>
+      </tr>
+      {% for product in products %}
+      <tr>
+          <td>{{product.id}} </td>
+          <td>{{product.product_name}} </td>
+          <td>{{product.product_detail}}</td>
+          <td><img class="image" src="/media/{{product.product_image}}" alt=""></td>
+          
+          </tr>
+      {% endfor %}
+  </table>
+   
+-->
+   
+</body>
+</html>

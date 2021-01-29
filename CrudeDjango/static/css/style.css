@@ -1,0 +1,38 @@
+h1{
+    background-color: burlywood;
+    color: blue;
+}
+
+p.products{
+    text-align: center;
+}
+.logo{
+    width: 150px;
+    height: 100px;
+}
+table{
+    border: 1px;
+    border-collapse: collapse;
+}
+th{
+    width: auto;
+}
+td{
+    text-align: center;
+}
+
+.image{
+    width: 250px;
+    height: 270px;
+
+}
+div{
+    display: inline;
+}
+.add{
+  align-items: center;
+  border: 3px solid green; 
+  text-align: center;
+}
+
+
