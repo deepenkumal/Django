@@ -10,5 +10,5 @@ class PeopleForm(forms.ModelForm):
             'name':forms.TextInput(attrs={'class':'from form-control'}),
             'country':forms.TextInput(attrs={'class':'form-control'}),
             'age':forms.TextInput(attrs={'class':'form-control'}),
-            'image':forms.FileInput(attrs={'class':'form-control'})
+            'image':forms.FileInput(attrs={'class':'form-control'}),
         }
