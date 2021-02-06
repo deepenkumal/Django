@@ -1,3 +1,11 @@
 h1{
     background-color:rgba(83, 19, 83, 0.911);
 }
+button a{
+    color:aliceblue;
+    text-decoration: none;
+    text-align: center;
+}
+ul li{
+    list-style-type: none;
+}

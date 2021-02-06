@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{%block title%}This is show page{% endblock %}
+{% block content %}
+<div class="container">
+   
+    <div class="row">
+        {% if peoples %}
+        <div class="col-md-2">Name</div>
+        <div class="col-md-2">Country</div>
+        <div class="col-md-1">Age</div>
+        <div class="col-md-3">Images</div>
+        <div class="col-md-4">Action</div>
+    </div>
+        {% for people in peoples %}
+    <div class="row">
+        <div class="col-md-2">{{people.name}}</div>
+        <div class="col-md-2">{{people.country}}</div>
+        <div class="col-md-1">{{people.age}}</div>
+        <div class="col-md-3"><img src="media/{{people.image}}" alt="people image" height="150" width="180" style="margin-top: 15px;"></div>
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-info"><a href="{% url 'updatepeople' people.id %}">Edit</a></button>
+            <button type="submit" class="btn btn-danger"><a href="{% url 'deletepeople' people.id %}">Delete</a></button>
+        </div>
+    </div>
+        {% endfor %} 
+        {% endif %}
+   
+</div>
+{% endblock %}
