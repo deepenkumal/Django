@@ -31,6 +31,10 @@ def update_people(request,id):
 
 def show(request):
     peoples=People.objects.all()
+    #search code
+    people_name = request.GET.get('people_name')
+    if people_name != '' and people_name is not None:
+        peoples = People.objects.filter(name__icontains=people_name)
     return render(request,'show.html',{'peoples':peoples})
 
 def delete_people(request,id):
