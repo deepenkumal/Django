@@ -38,7 +38,8 @@ def show(request):
     return render(request,'show.html',{'peoples':peoples})
 
 def delete_people(request,id):
-    if request.method=="GET":
-        p_id=People.objects.get(id=id)
-        p_id.delete()
+    people=People.objects.get(id=id)
+    if request.method=="POST":
+        people.delete()
         return redirect('show')
+    return render(request,'delete_people.html',{'people':people})

@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{%block title%}This is delete confirmation page{% endblock %}
+{% block content %}
+
+    <form action="" method="POST">
+        <h2>Are you sure want to delete</h2>
+        {% csrf_token %}
+        <button class="btn btn-danger">Confirm</button>
+    </form>
+
+{% endblock %}
